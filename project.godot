@@ -1,0 +1,19 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; but here we go.
+config_version=5
+
+[application]
+config/name="2_5D_TowerDefense"
+run/main_scene="res://scenes/Main.tscn"
+config/features=PackedStringArray("4.2" , "ForwardPlus")
+
+[rendering]
+quality/driver/driver_name="Vulkan"
+
+[input]
+action_advance_left={"deadzone":0.5,"events":[{"type":"Key","scancode":16777234}]}
+action_advance_right={"deadzone":0.5,"events":[{"type":"Key","scancode":16777236}]}
+action_rotate_left={"deadzone":0.5,"events":[{"type":"Key","scancode":81}]}
+action_rotate_right={"deadzone":0.5,"events":[{"type":"Key","scancode":69}]}
+action_place_unit={"deadzone":0.5,"events":[{"type":"MouseButton","button_index":1,"pressed":false}]}

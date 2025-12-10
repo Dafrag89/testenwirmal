@@ -1,0 +1,41 @@
+[gd_scene load_steps=9 format=3]
+
+[ext_resource type="Script" path="res://scripts/game_manager.gd" id="1"]
+[ext_resource type="PackedScene" path="res://scenes/Enemy.tscn" id="2"]
+[ext_resource type="PackedScene" path="res://scenes/Tower.tscn" id="3"]
+[ext_resource type="PackedScene" path="res://scenes/Powerup.tscn" id="4"]
+[ext_resource type="Script" path="res://scripts/camera_rig.gd" id="5"]
+
+[sub_resource type="Curve3D" id="1"]
+_points = PackedVector3Array(-12, 0, -8, -6, 0, -8, 0, 0, -8, 6, 0, -8, 12, 0, -8)
+
+[sub_resource type="PlaneMesh" id="2"]
+size = Vector2(28, 20)
+
+[node name="Main" type="Node3D"]
+script = ExtResource("1")
+enemy_scene = ExtResource("2")
+tower_scene = ExtResource("3")
+powerup_scene = ExtResource("4")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.901298, -0.349593, -0.254889, 0, 0.583449, -0.812148, 0.433201, 0.733491, 0.523372, 6, 5, 0)
+shadow_enabled = true
+
+[node name="CameraRig" type="Node3D" parent="."]
+script = ExtResource("5")
+
+[node name="Camera3D" type="Camera3D" parent="CameraRig"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 10, 0)
+
+[node name="Ground" type="MeshInstance3D" parent="."]
+mesh = SubResource("2")
+
+[node name="EnemyPath" type="Path3D" parent="."]
+curve = SubResource("1")
+
+[node name="EnemyContainer" type="Node3D" parent="."]
+
+[node name="TowerContainer" type="Node3D" parent="."]
+
+[node name="PowerupContainer" type="Node3D" parent="."]
