@@ -101,7 +101,10 @@ func _on_enemy_defeated(enemy: Node3D) -> void:
     _currency += 5
     if powerup_scene and _rng.randf() < 0.5:
         var powerup := powerup_scene.instantiate()
-        powerup.kind = _rng.randi_range(0, 1) == 0 ? "damage" : "speed"
+        if _rng.randi_range(0, 1) == 0:
+            powerup.kind = "damage"
+        else:
+            powerup.kind = "speed"
         powerup.global_position = enemy.global_position + Vector3(0, 0.2, 0)
         _powerup_container.add_child(powerup)
 
