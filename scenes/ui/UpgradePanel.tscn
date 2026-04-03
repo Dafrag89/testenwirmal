@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/ui/UpgradePanel.gd" id="1"]
+
+[node name="UpgradePanel" type="Panel"]
+visible = false
+offset_left = 420.0
+offset_top = 180.0
+offset_right = 860.0
+offset_bottom = 540.0
+script = ExtResource("1")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 352.0
+offset_bottom = 40.0
+text = "Upgrade-Auswahl folgt"

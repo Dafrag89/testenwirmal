@@ -1,0 +1,8 @@
+{
+  "id": "mage",
+  "name": "Magier",
+  "description": "Kontrolliert das Feld mit magischen Bolzen.",
+  "max_health": 80,
+  "move_speed": 235,
+  "start_weapon": "magic_bolt"
+}

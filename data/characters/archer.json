@@ -1,0 +1,8 @@
+{
+  "id": "archer",
+  "name": "Bogenschütze",
+  "description": "Schneller Distanzkämpfer mit präzisen Treffern.",
+  "max_health": 90,
+  "move_speed": 250,
+  "start_weapon": "arrow_projectile"
+}

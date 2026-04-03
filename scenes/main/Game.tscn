@@ -1,0 +1,39 @@
+[gd_scene load_steps=8 format=3]
+
+[ext_resource type="Script" path="res://scripts/main/Game.gd" id="1"]
+[ext_resource type="PackedScene" path="res://scenes/ui/HUD.tscn" id="2"]
+[ext_resource type="PackedScene" path="res://scenes/ui/UpgradePanel.tscn" id="3"]
+[ext_resource type="Script" path="res://scripts/managers/SpawnManager.gd" id="4"]
+[ext_resource type="Script" path="res://scripts/managers/ProgressionManager.gd" id="5"]
+[ext_resource type="Script" path="res://scripts/managers/RunManager.gd" id="6"]
+
+[node name="Game" type="Node2D"]
+script = ExtResource("1")
+
+[node name="World" type="Node2D" parent="."]
+
+[node name="PlayerSpawn" type="Marker2D" parent="World"]
+
+[node name="EnemyContainer" type="Node2D" parent="World"]
+
+[node name="PickupContainer" type="Node2D" parent="World"]
+
+[node name="ProjectileContainer" type="Node2D" parent="World"]
+
+[node name="Managers" type="Node" parent="."]
+
+[node name="SpawnManager" type="Node" parent="Managers"]
+script = ExtResource("4")
+
+[node name="ProgressionManager" type="Node" parent="Managers"]
+script = ExtResource("5")
+
+[node name="RunManager" type="Node" parent="Managers"]
+script = ExtResource("6")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="HUD" parent="CanvasLayer" instance=ExtResource("2")]
+
+[node name="UpgradePanel" parent="CanvasLayer" instance=ExtResource("3")]
+visible = false
