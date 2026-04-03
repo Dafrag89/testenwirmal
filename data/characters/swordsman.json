@@ -1,0 +1,8 @@
+{
+  "id": "swordsman",
+  "name": "Schwertkämpfer",
+  "description": "Robuster Nahkämpfer mit solidem Startschaden.",
+  "max_health": 120,
+  "move_speed": 220,
+  "start_weapon": "sword_slash"
+}
